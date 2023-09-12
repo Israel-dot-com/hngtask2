@@ -25,3 +25,11 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+
+.custom-background {
+  background-image: url('/images/Poster.png');
+  background-size: cover; /* Adjust background properties as needed */
+  background-position: center;
+  /* Additional background properties can be added here */
+}
