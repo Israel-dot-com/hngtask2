@@ -1,22 +1,21 @@
-import Image from 'next/image'
-import Logo from './images/Logo.png'
-import Poster from "./images/Poster.png"
-import Search from "./images/Search.png"
+import getPopular from "./fetcher/getPopular";
+import MovieCard from "./components/MovieCard";
 
-export default function Home() {
+export default async function Userspage(){
+    const users = await getPopular()
+    
+    return (
+        <div>
+              <h1>Users</h1>
+            {/* {console.log(users)} */}
+            <div className="" >
+            {users.results.map((user) => (
+                <MovieCard user={user} key={user.id} />
+            ))}
+            </div>
 
 
-  
-  return (
-    <main className="bg-white min-h-screen">
-      <div className="custom-background">
-      <nav className="">
-        <a><Image src={Logo} alt="logo" className="" /></a>
 
-        <div> <input placeholder='What do you want to watch' />  </div>
-      </nav>
-      </div>
-      
-    </main>
-  )
+        </div>
+    )
 }
