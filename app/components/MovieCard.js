@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 function MovieCard({ movie }) {
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex items-center justify-center" data-testid="movie-card">
       <div className="max-w-sm bg-white border mx-5 border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <Image
           data-testid="movie-poster"
@@ -15,11 +15,11 @@ function MovieCard({ movie }) {
         />
         <div className="p-5">
           <div>
-            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white" data-testid="movie-title">
               {movie.original_title}
             </h5>
           </div>
-          <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+          <p className="mb-3 font-normal text-gray-700 dark:text-gray-400" data-testid="movie-release-date">
             {movie.release_date}
           </p>
           <a

@@ -47,9 +47,8 @@ export default function NavBar() {
 
           {/* Menu Bar */}
           <div className="flex space-x-4">
-            <a href="#" className="text-white hover:text-blue-300">Home</a>
-            <a href="#" className="text-white hover:text-blue-300">About</a>
-            <a href="#" className="text-white hover:text-blue-300">Contact</a>
+           
+            <a href="#" className="text-white hover:text-blue-300">Sign In</a>
           </div>
         </div>
       </nav>

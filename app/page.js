@@ -26,7 +26,7 @@ function Movie2() {
             <h5 className='text-black'>Featured Movies</h5>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
                 {first10Movies.map((movie) => (
-                    <MovieCard className="" key={movie.id} movie={movie} />
+                    <MovieCard className="" data-testid="movie-card" key={movie.id} movie={movie} />
                 ))}
             </div>
             <Footer />
