@@ -128,10 +128,10 @@ export default async function Moviepage({params: {id}}){
          <div className="w-1/3 bg-white">
             <div className="flex flex-col p-4">
             <button className="bg-red-900 text-white py-2 px-4 rounded-md mb-2">
-               Button 1
+               See Showtimes
             </button>
             <button className="bg-pink-200 border border-solid border-red-950 text-white py-2 px-4 rounded-md mb-2">
-               Button 2
+               More Watch Options
             </button>
 
             <div className="relative pt-10">

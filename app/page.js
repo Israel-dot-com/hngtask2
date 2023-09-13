@@ -1,5 +1,5 @@
 "use client"
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import MovieCard from './components/MovieCard';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
@@ -26,7 +26,9 @@ function Movie2() {
             <h5 className='text-black'>Featured Movies</h5>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
                 {first10Movies.map((movie) => (
+                    <Suspense fallback={<div>Loading...</div>}>
                     <MovieCard className="" data-testid="movie-card" key={movie.id} movie={movie} />
+                    </Suspense>
                 ))}
             </div>
             <Footer />
