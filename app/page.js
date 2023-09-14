@@ -1,6 +1,5 @@
 "use client"
 import React, { useState, useEffect, Suspense } from 'react';
-import { Suspense } from 'react'
 import MovieCard from './components/MovieCard';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
