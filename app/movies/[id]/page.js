@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Teaser from "../../images/Teaser.svg";
 
+
 // Movie info page
 export default async function Moviepage({params: {id}}){
     const movie = await getMovie(id)
