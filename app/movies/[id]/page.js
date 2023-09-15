@@ -9,7 +9,7 @@ export default async function Moviepage({params: {id}}){
     const movie = await getMovie(id)
 
     const timeofmovie = movie.runtime 
-      const localTime = new Date(timeofmovie);
+      const localTime = new Date(movie.runtime);
       const hours = Math.floor(timeofmovie / 60);
       const minutes = timeofmovie % 60;
       const timeinUTC = `${hours} H ${minutes} M `
