@@ -7,11 +7,13 @@ import Teaser from "../../images/Teaser.svg";
 export default async function Moviepage({params: {id}}){
     const movie = await getMovie(id)
 
-    const timeofmovie = movie.runtime
+    const timeofmovie = movie.runtime 
+      const localTime = new Date(timeofmovie);
       const hours = Math.floor(timeofmovie / 60);
       const minutes = timeofmovie % 60;
       const timeinUTC = `${hours} H ${minutes} M `
       
+      const utcTimeString = localTime.toISOString();
 
     return (
          <div className="bg-white min-h-screen">
@@ -113,7 +115,7 @@ export default async function Moviepage({params: {id}}){
                         <h1 className="text-2xl font-bold" data-testid="movie-title">{movie.title} .  </h1>
                         <h1 className="text-2xl font-bold" data-testid="movie-release-date">{movie.release_date} . </h1>
                         <h1 className="text-2xl font-bold" > {movie.adult?`PG-18`:`PG-13`}  . </h1>
-                        <h1 className="text-2xl font-bold"data-testid="movie-runtime" > {timeofmovie} </h1>
+                        <h1 className="text-2xl font-bold"data-testid="movie-runtime" > {utcTimeString} </h1>
                      </div>
                      
   
