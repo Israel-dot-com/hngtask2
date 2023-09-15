@@ -13,7 +13,7 @@ export default async function Moviepage({params: {id}}){
       const minutes = timeofmovie % 60;
       const timeinUTC = `${hours} H ${minutes} M `
       
-      const utcTimeString = localTime.toISOString();
+      const utcTimeString = localTime.toUTCString();
 
     return (
          <div className="bg-white min-h-screen">
