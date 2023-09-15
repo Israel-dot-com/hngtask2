@@ -9,7 +9,7 @@ export default function NavBar() {
     <div>
         <div className="relative">
       {/* Hero Image */}
-      <div className="h-[50vh] relative">
+      <div className="h-[45vh] relative">
         <Image
           src={heroImage}
           alt="Hero Image"

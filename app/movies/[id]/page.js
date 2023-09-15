@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Teaser from "../../images/Teaser.svg";
 
-
+// Movie info page
 export default async function Moviepage({params: {id}}){
     const movie = await getMovie(id)
 
@@ -15,6 +15,7 @@ export default async function Moviepage({params: {id}}){
 
     return (
          <div className="bg-white min-h-screen">
+            {/* Nav Bar */}
             <aside class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-52 md:translate-x-0 border-2 border-gray-400 border-solid">
    <div class="h-full px-3 py-4 overflow-y-auto bg-white dark:bg-white ">
       <ul class="space-y-20 md:space-y-10 font-medium">
@@ -92,7 +93,7 @@ export default async function Moviepage({params: {id}}){
       </ul>
    </div>
 </aside>
-
+{/* Movie Details */}
             <div class="p-14 bg-white sm:ml-64 text-black">
                   {/* Image Start */}
                <div className="h-[33vh] relative">
@@ -108,7 +109,7 @@ export default async function Moviepage({params: {id}}){
                <div className="flex flex-col md:flex-row">
                   {/* Left part (2/3 of the screen width) */}
                   <div className="md:w-2/3 bg-white p-4">
-                     <h1 className="text-2xl font-bold">{movie.title} . {movie.release_date} . {movie.adult?`PG-18`:`PG-13`}. {timeofmovie}</h1>
+                     <h1 className="text-2xl font-bold">{movie.title} . {movie.release_date} . {movie.adult?`PG-18`:`PG-13`}. {timeofmovie}. {movie.genre_ids}</h1>
                      <p>{movie.overview}.</p>
                   </div>
 

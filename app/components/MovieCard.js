@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-
+// This is the Card Component and the data in it
 function MovieCard({ movie }) {
   return (
     <div className="flex items-center justify-center" data-testid="movie-card">
