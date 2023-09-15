@@ -27,7 +27,7 @@ function Movie2() {
             <NavBar />
             <h5 className='text-black'>Featured Movies</h5>
             {/* Maps over the movies and render them in a grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
                 {first10Movies.map((movie) => (
                     
                     <MovieCard className="" data-testid="movie-card" key={movie.id} movie={movie} />

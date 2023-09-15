@@ -19,22 +19,17 @@ export default function NavBar() {
       </div>
 
       {/* Navbar */}
-      <nav className="absolute top-0 left-0 right-0 bg-opacity-80 backdrop-blur-lg p-4">
-        <div className="container mx-auto flex justify-between items-center">
+      <nav className="absolute top-0 left-0 right-0 p-4">
+        <div className=" flex justify-between items-center">
           {/* Logo */}
           <div className="flex items-center">
-            
-            <span className="text-white text-2xl font-bold ml-2"><Image src={logoImage} alt="Logo" width={50} height={50} /></span>
+            <span className="text-white text-2xl font-bold ml-2"><Image src={logoImage} alt="Logo" width={150} height={150} /></span>
           </div>
 
           {/* Search Bar */}
-          <div className="flex-grow mx-4">
+          <div className=" flex items-center  mx-4">
             <div className="relative">
-              <input
-                type="text"
-                placeholder="Search..."
-                className="w-full h-10 px-4 py-2 text-gray-900 placeholder-gray-400 bg-white rounded-full focus:outline-none focus:ring focus:ring-blue-300"
-              />
+              <input type="text" id="password" class="w-full md:w-[700px] pl-3 pr-10 py-2 border-2 border-gray-200 bg-transparent text-gray-800" placeholder="What do you want to watch?" />
               <Image
                 src={searchIcon}
                 alt="Search Icon"
@@ -46,9 +41,9 @@ export default function NavBar() {
           </div>
 
           {/* Menu Bar */}
-          <div className="flex space-x-4">
+          <div className="flex space-x-4 px-5">
            
-            <a href="#" className="text-white hover:text-blue-300">Sign In</a>
+            <a href="#" className="text-white hover:text-blue-300 text-sm">SignIn</a>
           </div>
         </div>
       </nav>
