@@ -3,12 +3,13 @@ import Link from "next/link";
 import Image from "next/image";
 import Teaser from "../../images/Teaser.svg";
 
+
 // Movie info page
 export default async function Moviepage({params: {id}}){
     const movie = await getMovie(id)
 
     const timeofmovie = movie.runtime 
-      const localTime = new Date(timeofmovie);
+      const localTime = new Date(movie.release_date);
       const hours = Math.floor(timeofmovie / 60);
       const minutes = timeofmovie % 60;
       const timeinUTC = `${hours} H ${minutes} M `
@@ -112,10 +113,10 @@ export default async function Moviepage({params: {id}}){
                   {/* Left part (2/3 of the screen width) */}
                   <div className="md:w-2/3 bg-white p-4">
                      <div className="flex flex-row">
-                        <h1 className="text-2xl font-bold" data-testid="movie-title">{movie.title} .  </h1>
-                        <h1 className="text-2xl font-bold" data-testid="movie-release-date">{movie.release_date} . </h1>
-                        <h1 className="text-2xl font-bold" > {movie.adult?`PG-18`:`PG-13`}  . </h1>
-                        <h1 className="text-2xl font-bold"data-testid="movie-runtime" > {utcTimeString} </h1>
+                        <h1 className="text-xl" data-testid="movie-title">{movie.title}</h1>
+                        <h1 className="text-xl" data-testid="movie-release-date">{utcTimeString} </h1>
+                        <h1 className="text-xl" > {movie.adult?`PG-18`:`PG-13`}</h1>
+                        <h1 className="text-xl" data-testid="movie-runtime" > {timeofmovie} </h1>
                      </div>
                      
   
