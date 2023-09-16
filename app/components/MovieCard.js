@@ -20,11 +20,11 @@ function MovieCard({ movie }) {
           </div>
         <div className="p-5">
           <div>
-            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white" data-testid="movie-title">
+            <h5 data-testid="movie-title" className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
               {movie.original_title}
             </h5>
           </div>
-          <p className="mb-3 font-normal text-gray-700 dark:text-gray-400" data-testid="movie-release-date">
+          <p data-testid="movie-release-date" className="mb-3 font-normal text-gray-700 dark:text-gray-400">
             {movie.release_date}
           </p>
           <a
