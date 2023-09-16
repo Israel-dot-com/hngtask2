@@ -30,7 +30,7 @@ function Movie2() {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
                 {first10Movies.map((movie) => (
                     
-                    <MovieCard className="" data-testid="movie-card" key={movie.id} movie={movie} />
+                    <MovieCard className="" key={movie.id} movie={movie} />
                     
                 ))}
             </div>

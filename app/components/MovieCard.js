@@ -3,8 +3,8 @@ import Image from 'next/image';
 // This is the Card Component and the data in it
 function MovieCard({ movie }) {
   return (
-    <div className="flex items-center justify-center" data-testid="movie-card">
-      <div className="max-w-sm bg-white border mx-5 border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div className="flex items-center justify-center" >
+      <div data-testid="movie-card" className="max-w-sm bg-white border mx-5 border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
           <div className='relative'>
             <Image
               data-testid="movie-poster"
