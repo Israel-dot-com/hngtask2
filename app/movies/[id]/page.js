@@ -112,14 +112,10 @@ export default async function Moviepage({params: {id}}){
                <div className="flex flex-col md:flex-row">
                   {/* Left part (2/3 of the screen width) */}
                   <div className="md:w-2/3 bg-white p-4">
-                     <div className="flex flex-row">
                         <h1 className="text-xl" data-testid="movie-title">{movie.title}</h1>
                         <h1 className="text-xl" data-testid="movie-release-date">{utcTimeString} </h1>
                         <h1 className="text-xl" > {movie.adult?`PG-18`:`PG-13`}</h1>
                         <h1 className="text-xl" data-testid="movie-runtime" > {timeofmovie} </h1>
-                     </div>
-                     
-  
 
                      <p data-testid="movie-overview">{movie.overview}</p>
                   </div>
